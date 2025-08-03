@@ -1,7 +1,7 @@
 // App.jsx
 import { useState } from "react";
-import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
+import Navbar from "./components/layout/Navbar";
 // import Hero from "./components/sections/Hero";
 import HomeView from "./views/homeView";
 // import CategorySection from "./components/sections/categorySection";
@@ -60,6 +60,12 @@ function App() {
           setLanguage={setLanguage}
         />
 
+        <ChatWidget 
+          darkMode={darkMode} 
+          showChat={showChat} 
+          setShowChat={setShowChat} 
+        />
+
         {currentView === "home" && (
           <HomeView 
             darkMode={darkMode} 
@@ -101,6 +107,7 @@ function App() {
             wishlist={wishlist}
             setSelectedProduct={setSelectedProduct}
             darkMode={darkMode}
+            setCurrentView={setCurrentView} 
           />
         )}
 
@@ -111,15 +118,6 @@ function App() {
             setCurrentView={setCurrentView}
             darkMode={darkMode}
             showNotif={showNotif}
-          />
-        )}
-
-        {currentView === "wishlist" && (
-          <WishlistView 
-            wishlist={wishlist}
-            setSelectedProduct={setSelectedProduct}
-            darkMode={darkMode}
-            setCurrentView={setCurrentView}  // ← Ini yang harus ditambahkan!
           />
         )}
 

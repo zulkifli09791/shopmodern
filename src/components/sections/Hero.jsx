@@ -1,9 +1,9 @@
-// components/Hero.jsx
 export default function Hero() {
   return (
     <div className="relative h-96 md:h-[500px] overflow-hidden mt-16">
+      {/* Background Image */}
       <div 
-        className="absolute inset-0 bg-gradient-to-r from-blue-600/90 to-purple-600/90 z-10"
+        className="absolute inset-0 z-0"
         style={{
           backgroundImage: 'url("https://placehold.co/1920x600/1e40af/ffffff?text=Modern+Shopping+Experience")',
           backgroundSize: 'cover',
@@ -11,7 +11,17 @@ export default function Hero() {
           backgroundRepeat: 'no-repeat',
         }}
       />
-      <div className="relative z-20 flex items-center justify-center h-full text-center text-white px-4">
+
+      {/* Overlay Gradient */}
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-600/90 to-purple-600/90 z-10" />
+
+      {/* Text Content */}
+      <div className="relative z-20 flex flex-col items-center justify-center h-full text-center text-white px-4">
+        {/* Tambahkan teks “Modern Shopping Experience” di atas */}
+        <div className="text-lg md:text-2xl font-semibold mb-2 tracking-wide uppercase opacity-90">
+          Modern Shopping Experience
+        </div>
+
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-6xl font-bold mb-4 animate-fade-in">
             Temukan Produk Impian Anda
@@ -29,10 +39,11 @@ export default function Hero() {
           </div>
         </div>
       </div>
-      
-      <div className="absolute top-20 left-10 w-20 h-20 bg-yellow-400 rounded-full opacity-20 animate-bounce"></div>
-      <div className="absolute bottom-20 right-10 w-16 h-16 bg-pink-400 rounded-full opacity-20 animate-bounce" style={{animationDelay: '1s'}}></div>
-      <div className="absolute top-1/2 left-20 w-12 h-12 bg-green-400 rounded-full opacity-20 animate-bounce" style={{animationDelay: '2s'}}></div>
+
+      {/* Hiasan Bola-bola */}
+      <div className="absolute top-20 left-10 w-20 h-20 bg-yellow-400 rounded-full opacity-80 animate-bounce z-30"></div>
+      <div className="absolute bottom-20 right-10 w-16 h-16 bg-pink-400 rounded-full opacity-80 animate-bounce z-30"  style={{ animationDelay: '1s' }}></div>
+      <div className="absolute top-1/2 left-20 w-12 h-12 bg-green-400 rounded-full opacity-80 animate-bounce z-40"  style={{ animationDelay: '2s' }}></div>
     </div>
   );
 }
