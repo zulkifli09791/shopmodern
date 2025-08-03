@@ -2,7 +2,7 @@
 import { useState } from "react";
 
 export default function ProductDetailView({ product, addToCart, addToWishlist, wishlist, darkMode, setCurrentView }) {
-  const [selectedImage, setSelectedImage] = useState(product.image);
+  const [selectedImage] = useState(product.image);
 
   return (
     <div className="min-h-screen pt-24 pb-16">

@@ -1,5 +1,5 @@
 // views/ProductsSection.jsx
-import ProductCard from "../components/ProductCard";
+import ProductCard from "../src/components/ProductCard";
 
 export default function ProductsSection({ searchQuery, selectedCategory, darkMode, setSelectedProduct }) {
   const products = [

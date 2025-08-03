@@ -1,5 +1,5 @@
 // components/Navbar.jsx
-import { useState } from "react";
+// import { useState } from "react";
 
 export default function Navbar({ 
   currentView, 

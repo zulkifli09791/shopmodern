@@ -1,14 +1,8 @@
-// components/CategorySection.jsx
-export default function CategorySection({ selectedCategory, setSelectedCategory, darkMode }) {
-  const categories = [
-    { id: "all", name: "Semua Produk", icon: "ShoppingBag" },
-    { id: "electronics", name: "Elektronik", icon: "Monitor" },
-    { id: "fashion", name: "Fashion", icon: "Shirt" },
-    { id: "home", name: "Rumah & Dekor", icon: "Home" },
-    { id: "beauty", name: "Kecantikan", icon: "Sparkles" },
-    { id: "sports", name: "Olahraga", icon: "Dumbbell" },
-  ];
+// import { useState } from "react";
+import { categories } from "../../data/categories";
+import { t } from "../../utils/helpers";
 
+export default function CategorySection({ selectedCategory, setSelectedCategory, darkMode }) {
   return (
     <div className={`py-12 ${darkMode ? 'bg-gray-900' : 'bg-gray-50'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -42,7 +36,7 @@ export default function CategorySection({ selectedCategory, setSelectedCategory,
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
                   </svg>
                 </div>
-                <span className="font-medium text-sm">{category.name}</span>
+                <span className="font-medium text-sm">{t(category.name)}</span>
               </div>
             </button>
           ))}
