@@ -1,3 +1,12 @@
+
+Ini adalah tampilan awal website:
+
+![Preview Website](./previewweb/Cuplikan%20layar%202025-08-03%20110137.png)
+![Preview Website](./previewweb/Cuplikan%20layar%202025-08-03%20110156.png)
+![Preview Website](./previewweb/Cuplikan%20layar%202025-08-03%20110212.png)
+![Preview Website](./previewweb/Cuplikan%20layar%202025-08-03%20110227.png)
+![Preview Website](./previewweb/Cuplikan%20layar%202025-08-03%20110240.png)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
